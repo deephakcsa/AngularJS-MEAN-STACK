@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>MyApp</title>
+    <script src="http://localhost:1234/angular.min.js"></script>
+    <script src="http://localhost:1234/angular-route.min.js"></script>
+    <script src="http://localhost:1234/app.js"></script>
+</head>
+
+<body>
+    <div ng-app='myapp' ng-controller="mycontroller">
+        <div ng-if="!status">
+            <a href="#/login">Login</a> |
+            <a href="#/register">Register</a>
+        </div>
+        <div ng-if="status">
+            <a href="#/profile">Profile</a> |
+            <a href="#/messages">Messages</a> 
+        </div>
+        <div ng-view=""></div>
+    </div>
+
+</body>
+
+</html>
